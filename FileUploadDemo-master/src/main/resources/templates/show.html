@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org"><head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<img th:src="@{fileName}" style="width: 200px" />-->
+<div>
+    <form action="UploadServlet.do" method="post" enctype="multipart/form-data">
+        <div><a href="$path/upImage.html">更换头像</a></div>
+
+        #foreach( $ut in  $user.getTouxiang() )
+        <img src=" $ut.getImage_path()"  width="200" height="200">
+        #end
+        <div>我的头像：</div>
+        <div>我的姓名：$user.getUsername()</div>
+        <div><a href="$path/myAnswer.do">我的解答</a></div>
+        <div><a href="$path/myQuestion.do">我的提问</a></div>
+    </form>
+</div>
+<div>
+    <form action="UploadServlet.do" method="post" enctype="multipart/form-data">
+        <div><a href="$path/upImage.html">更换头像</a></div>
+
+        #foreach( $ut in  $user.getTouxiang() )
+        <img src=" $ut.getImage_path()"  width="200" height="200">
+        #end
+        <div>我的头像：</div>
+        <div>我的姓名：$user.getUsername()</div>
+        <div><a href="$path/myAnswer.do">我的解答</a></div>
+        <div><a href="$path/myQuestion.do">我的提问</a></div>
+    </form>
+</div>
+</body>
+</html>
